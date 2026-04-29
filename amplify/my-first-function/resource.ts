@@ -1,3 +1,6 @@
-export const handler = async (event: any) => {
-  return "Hello from my first function! ttttttttttttttttttttttttttt";
-};
+import { defineFunction } from "@aws-amplify/backend";
+
+export const myFirstFunction = defineFunction({
+  name: "my-first-function",
+  entry: "./handler.ts"
+});
